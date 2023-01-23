@@ -1,10 +1,11 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-public class MemoryMemberRepository implements MemberRepository{
+public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>(); // 임시 저장소 store
     private static long sequence = 0L;
@@ -32,7 +33,7 @@ public class MemoryMemberRepository implements MemberRepository{
         return new ArrayList<>(store.values());
     }
 
-    public void clearStore(){ // 데이터 소멸
+    public void clearStore() { // 데이터 소멸
         store.clear();
     }
 }

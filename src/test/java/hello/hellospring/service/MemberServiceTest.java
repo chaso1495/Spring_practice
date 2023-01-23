@@ -11,7 +11,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
 
-class MemberServiceTest {
+class MemberServiceTest { // 순수한 단위 테스트(unit test)
 
     MemberService memberService;
     MemoryMemberRepository memberRepository;
