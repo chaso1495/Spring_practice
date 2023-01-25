@@ -20,6 +20,7 @@ class MemberServiceIntegrationTest { // 스프링 없이 테스트하는 게 좋
     MemberRepository memberRepository;
 
     @Test
+    // @Commit 어노테이션을 달아준다면 테스트에서 실행된 action이 DB에 반영된다.
     void 회원가입() { // 이제 직접 스프링을 실행한 뒤 테스트에 돌입한다. 테스트가 종료되면 스프링은 아웃된다.
         // given (이런 상황이 주어졌고)
         Member member = new Member();

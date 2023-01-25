@@ -5,6 +5,7 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +13,7 @@ import java.util.Optional;
 // 서비스는 도메인과 리포를 활용하여 실제 비즈니스 로직을 작성하는 부분이다.
 
 // 서비스는 비즈니스를 처리하기에 비즈니스에 의존적으로 설계한다.
+@Transactional // 데이터를 저장하거나 변경할 때는 항상 필요한 어노테이션이다. 회원가입 메서드에만 사용할 수도 있다.
 public class MemberService { // 쉬프트 command T로 테스트 메서드를 작성할 수 있다.
     private final MemberRepository memberRepository;
 
