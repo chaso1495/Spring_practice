@@ -28,7 +28,8 @@ public class AppConfig { // 앱 전체를 설정하고 구성한다. 객체의 �
     @Bean
     public OrderService orderService() { // 생성자 주입, 이를 받아낸 구현체는 오직 실행에만 집중하면 된다.
         System.out.println("call AppConfig.orderService");
-        return new OrderServiceImpl(memberRepository(), discountPolicy());
+        // return new OrderServiceImpl(memberRepository(), discountPolicy());
+        return null;
     }
 
     @Bean
